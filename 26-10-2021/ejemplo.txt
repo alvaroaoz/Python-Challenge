@@ -1,0 +1,20 @@
+cd+nombre_de_carpeta moverse entre directorios
+cd+. volver atras
+cd+.. volver a la carpeta padre
+ls listar los elementos de la carpeta actual
+mkdir+nombre crea una carpeta con el nombre asignado
+touch+nombre_del_archivo.txt crea un archivo .txt en la ubicación
+touch+nombre{01,02,03}.txt crea 3 archivos .txt
+pwd		Ver en que directorio estoy
+cd		Cambiar directorio
+rm		Borrar
+mv		Mover archivo
+rmdir 	Borrar directorio
+ls -t		Ordena los archivos por fecha de modificacion
+ls -x		Ordena elementos por nombre y extension
+ls -X		Orcena elementos por extension y nombre
+ls -S		Ordena los archivos por tamaño de archivo
+cat		Muestra el contenido completo de un archivo
+head	Muestra las primeras lineas de un archivo
+tail		Muestra las ultimas lineas de un archivo
+touch	crea archivos
