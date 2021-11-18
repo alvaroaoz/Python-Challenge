@@ -1,0 +1,186 @@
+Facundo profesor.
+Algoritmo una serie de pasos ordenados para llegar a un objetivo o meta, un algoritmo es finito, y no es ambiguo.
+Que es una variable un simbolo constituyente de un predicado, una cantidad susceptible de tomar distintos valores numericos. defini platzi una variable es una caja en la que puedes guardar objetos, la variable tiene un nombre y ese nombre se llama identificador.
+= en python es asignación
+el identificador de una variable no puede comenzar con un numero las palabras siempre debe estar en minuscula y las palabras largas se separan con guion bajo.
+
+
+    Input("") para pedirle al usuario que introduzca datos.
+
+    int() con datos o variables dentro de parentesis para convertirlo en número entero.
+
+    str() para convertir números tanto decimales como enteros a strings.
+
+
+    Input("") para pedirle al usuario que introduzca datos.
+
+    int() con datos o variables dentro de parentesis para convertirlo en número entero.
+
+    str() para convertir números tanto decimales como enteros a strings.
+operadores logicos y de comparación
+Logicos:
+and para comparar si dos valores son verdaderos.
+-or para comparar si dos valores son falsos.
+-not para invertir el valor booleano.
+-== Compara dos valores y te dice si son iguales o no.
+-!= Compara dos valores y te dice sin son diferentes o no.
+-> Compara si es mayor que otro valor.
+-< Compara si es menor que otro valor.
+->= igual o mayor que el valor a comparar.
+-<= igual o menor que el valor a comparar.
+
+trabajando con texto cadena de caracteres.
+nombre = alvaro
+nombre.upper() genera mayus sostenidas de los caracteres ALVARO
+nombre.capitalize() hace que la primera letra sea mayuscula
+nombre.strip elimina espacios basura al principo o al final en la cadena de caracteres.
+nombre.lower genera que la cadena este en minusculas
+nombre.replace() la funcion recibe caracteres ('x', 'y') donde 'y' reemplazaria a 'x'
+nombre[0] muestra la primera letra ya que a traves de [] "corchetes" se accede a el indice.
+len() si dentro se pone una cadena dice cuantos caracteres tiene.
+
+las rebanadas-slices
+nombre[0:3] toma la rebanada desde el primer indice hasta el 2 por ejemplo de 'Francisco' tomaria Fra
+nombre[:3] se entiende que si no se pone nada en el principio es porque se va a comenzar desde el principio generando el mismo resultado que el anterior.
+nombre[3:] en este tomaria los caracteres a pártir del indice 3 es decir ncisco ya que entiende que queremos ir hasta el final
+nombre[3:7] con esto lo podemos seccionar tomando solo lo que le especificamos
+nombre[1:7:2] toma la cadena que va del 1 al 7 pero de 2 en 2 es decir que comenzando desde el caracter 1 'r' cuenta 2 y los va mostrando hasta cumplir con la peticion es decir llegar hasta el indice 7 devolviendo 'rni' F'r'a'n'c'i'sco.
+se puede tambien nombre[::] dando el nombre completo ya que se entiende que se va del principio al final tomando de 1 en 1 los indices
+nombre[::-1] hace que se cuenta negativamente es decir de atras hacia adelante, es decir inversos.
+While ciclos
+    while significa mientras
+
+En entorno virtual primero para crearlo se debe poner Creación de ambiente Virtual:
+
+python3 -m venv nombre_venv
+una vez creado solo se tiene que escribir el alias avenv para inicializarlo.
+
+en vscode si en la carpeta tenemos un archivo .gitignore y dentro de este copiamos el nombre de una carpeta o un archivo se tornara gris y no se compártira en caso de subirla a github.
+    Es una buena practica al iniciar cualquier proyecto inicializar git y generar un entorno virtual.
+
+List comprehensions = [element for element in iterable if condition] que es decir para cada elemento en el iterable se guardara el elemento solo si se cumple la condicion.
+dictionary comprehensions = {key: value for element in iterable if condition}
+
+Funciones anónimas: lambda
+
+lambda argumentos: expresion unicamente puede tener una linea la funcion no necesita la palabra return.
+
+clase en vivo lo que no sabias de python
+paralisis por analisis
+tipado estatico, python es de tipado dinamico
+mypy a traves de pip para que sea estatico
+el ciclo for no existe
+iter transforma los elementos en iterador
+
+funciones de orden superior
+es una funcion que recibe como parametro otra función
+filter [1, 4, 5, 6, 9, 13, 19, 21]
+my_list = [1, 4, 5, 6, 9, 13, 19, 21]
+odd = list(filter(lanbda x: x_%2 != 0, my_list))
+print(odd)
+
+map [1, 2, 3, 4, 5]
+squares = list(map(lambda x: x**2, my_list))
+print(squares)
+
+reduce [2, 2, 2, 2, 2]
+from functools import reduce
+
+my_list = [2, 2, 2, 2, 2]
+
+all_multiplied = reduce(lambda a, b: a * b, my_list)
+
+print(all_multiplied)
+
+
+
+manejo de errores
+errores de logica con debugging
+
+Assert statements
+afirmaciones en python; son una manera para manejar los errores, son expresiones combinando variables con operadores.
+assert condicion, mensaje de error #seria la forma de generarlo
+si nos devuelve verdadero se puede seguir con el codigo pero si devuelve falso eleva un error
+
+
+¿Cómo trabajar con archivos?
+Modos de Apertura
+
+    r -> Solo lectura
+    r+ -> Lectura y escritura
+    w -> Solo escritura. Sobre escribe el archivo si existe. Crea el archivo si no existe
+    w+ -> Escritura y lectura. Sobre escribe el archivo si existe. Crea el archivo si no existe
+    a -> Añadido (agregar contenido). Crea el archivo si éste no existe
+    a+ -> Añadido (agregar contenido) y lectura. Crea el archivo si éste no existe.
+
+with open("./ruta/del/archivo.txt", "r") as f
+
+
+
+CURSO PROFESIONAL DE PYTHON
+
+tipado estatico en python: hay que añadir una sintaxis adiicional a lo que ya hacemos. para declarar una variable y adicional asignarle un tipo colocar el nombre la variable 2 puntos espacio y el tipo de la variable ejemplo.
+a: int = 5
+print(a)#se imprime 5
+
+b: str = 'Hola'
+print(b)#se imprime hola
+
+c: bool = True
+print(c)# imprime True
+
+los typing de los diciionarios, listas y tuplas se deben importar del modulo.
+
+
+Como buena practica siempre se debe generar un git init en la terminal dentro de la carpeta que se va a trabajar el proyecto adicional hay que generar un entorno virtual con python3 -m venv venv en nuestro proyecto, adicional a ello con el comando touch .gitignore para dejar allí las carpetas que no queremos tener. Dentro del gitignore ponemos venv/ ya que este no se debe registrar en el repositorio interno que se tenga. Dentro de la terminal se debe entrar al entorno virtual con el comando .\venv\Scripts\activate.
+
+para verificar antes si un programa esta bien se puede poner en la consola mypy "nombre del programa a verificar" --check-untyped-defs que permitira ver los errores de tipo dentro del programa.
+
+avanzado de python
+Scope: alcance de las variables
+Las variables solo existen en la seccion que fueron creadas. local scopem global scope tienen alcance en todo el codigo y puede ser leida en todo el codigo, cada scope tienen variable que son propias a cada scope por más que sean las mismas variables. 
+
+~CLOSURES
+nested functions son funciones que estan creadas dentro de otra funcion ej:
+def main():
+    a = 1
+    def nested():
+        print(a)
+
+    nested()
+
+main()
+***
+def main():
+    a = 1
+    def nested():
+        print(a)
+
+    return nested
+
+my_func = main()
+my_func()
+
+con del se puede eliminar una funcion o una variable
+reglas para encontrar un closure
+debemos tener una nested functions
+la nested function debe referencias a un valor superior
+la funcion que envuelve a la nested function debe retornalra también
+
+los closure aparecen en clases cortas cuando se tenga una clase con un solo metodo se aplicara las closures de python para hacer que esa clase sea más elegante y el segundo caso donde aparecen los closures es cuando aparecen los decoradores.
+
+programando closures
+~Decoradores
+El concepto más avanzado de funciones, es un clousure que tiene una funcionalidad adiiconal, es una funcion que recibe como parametro uan funcion, le añade cosas, y retorna una funcion diferente.
+azucar sintactica cuando tenemos un codigo que fue embellecido para que nosotros lo veamos de manera mucho más estetica, un decorador tambien es un closure.
+~Programando decoradores.
+
+~Iterdores
+Una estructura de datos para guardar datos infinitos
+Los iterables son todos aquellos objetos que podemos recorrer en un ciclo, ej los strings, aquellas estructuras de datos divisiblesm el iterador si se puede recorrer en el lenguaje.
+iter combierte la list en un iterable con next se puede recorrer.
+¿Cómo construyo un iterador? R/ tenemos que tener una clases que tenga 2 metodos importantes, el metodo __iter__ (tanderiter) y el metodo __next__(downder next)
+__iter__ tener elementos o atributos que voy a necesitar para que mi iterador funcione.
+__next__ utilizamos para tener la funcion next permite extraer los elementos de mi iterador 
+ventajas nos ahorra recursos, los iteradores pesan menos
+
